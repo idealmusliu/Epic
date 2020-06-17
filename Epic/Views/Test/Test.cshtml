@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test</h2>
+
+<form action="/" method="post">
+    <input type="text"  id="test"/>
+    <input type="button" onclick="sendObj()" id="test1" value="Send" />
+</form>
+
+
+<script>
+    sendObj = () => {
+        var value = $("#test").val();
+
+        
+        $.ajax({
+            url: '/Test/Test',
+            type: 'POST',
+            data: value,
+            success: function () {
+                console.log("in");
+            },
+            error: function () {
+                alert("error");
+            }
+        });
+    }
+
+    
+</script>

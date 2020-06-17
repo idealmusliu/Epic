@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Epic.Models.Post>
+@{
+    ViewBag.Title = "Home";
+}
+ 
+<link href="~/Content/PhotosStyle.css" rel="stylesheet" />
+<script src="~/Scripts/ScriptPhotosLike.js"></script>
+
+ 
+
+<div class="container"> 
+        <section class="row col-md-12" id="pinBoot">
+            @foreach (var item in Model)
+            {
+            <div class="col-md-3">
+                <article class="white-panel">
+                    <img src="http://i.imgur.com/sDLIAZD.png" alt="">
+                    <h4><a href="#">Title 1</a></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                    </p>
+                </article>
+            </div>
+
+                @*<div class="col-md-3" style="background-color:lightgray; padding: 10px; margin:2px;">
+                        <img src="~/Images/@item.PicPath" height="100" width="100" /><br />
+                        @if (item.isFavorite)
+                        {
+                            <img src="~/Images/favorite.png" height="30" width="30" />
+                        }
+                        else
+                        {
+                            <img src="~/Images/notfavorite.png" height="30" width="30" />
+                        }
+                        <button class="btn">Favourite</button>
+                    </div>*@
+            }
+        </section> 
+</div> 
